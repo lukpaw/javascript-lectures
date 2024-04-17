@@ -7,3 +7,5 @@
   * Type Casting
   * Comments
   * Presentation: [./javascript01/javascript01.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/javascript01.md)
+
+&copy; 2024 Łukasz Pawlik

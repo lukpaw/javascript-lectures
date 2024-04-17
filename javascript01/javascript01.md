@@ -202,7 +202,7 @@ console.log(sum);
 
 * It's important to be aware of type coercion to avoid unexpected results in your JavaScript code.
 
-[Example 2](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example02.html)
+[Example 2](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example02.js)
 
 ## Scope (blocks, shadowing)
 
@@ -230,7 +230,7 @@ myFunction();
 console.log(x); // This will print "outer" (original value)
 ```
 
-[Example 3](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example03.html)
+[Example 3](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example03.js)
 
 ## Scope (hoisting)
 
@@ -278,7 +278,7 @@ let person = {
 console.log(person.name);  // Accessing a property by key
 ```
 
-[Example 4](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example04.html)
+[Example 4](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example04.js)
 
 ## Arrays, Array Properties and Methods
 
@@ -315,7 +315,7 @@ let missingItem = vegetables.indexOf("broccoli");  // missingItem will be -1
 console.log(missingItem);
 ```
 
-[Example 5](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example05.html)
+[Example 5](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example05.js)
 
 ## More Array Methods
 
@@ -353,7 +353,7 @@ console.log(removedElement);  // 0
 console.log(numbers);  // [1, 2, 3, 4]
 ```
 
-[Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example06.html)
+[Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example06.js)
 
 ## Array Methods: reverse, slice, concat
 
@@ -421,4 +421,4 @@ function calculateArea(radius) {
 }
 ```
 
-[Example 7](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example07.html)
+[Example 7](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example07.js)

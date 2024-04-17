@@ -1,7 +1,7 @@
 ## Scripting Languages - Python Lectures
 
-* **JavaScipt 1 (E1M1-2):**
-  * Introduction to JavaScipt
+* **JavaScript 1 (E1M1-2):**
+  * Introduction to JavaScript
   * Variables
   * Data Types
   * Type Casting

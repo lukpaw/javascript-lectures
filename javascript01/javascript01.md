@@ -62,15 +62,19 @@ console.log("Hello, World!");
 * HTML: defines a button and a span element.
 
 ```html
+<!-- j01_example01.html-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My title</title>
+  <title>My title</title>
+  <script src="j01_example01.js"></script>
+  <link rel="stylesheet" href="j01_example01.css">
 </head>
 <body>
-    My content
-    <span id="mySpan">Empty</span>
-    <button onclick="changeText()">Change Text</button>
+<h2>My first page</h2>
+<div id="mySpan">Empty</div>
+<br/>
+<button onclick="changeText()">Change Text</button>
 </body>
 </html>
 ```
@@ -78,6 +82,7 @@ console.log("Hello, World!");
 * JavaScript: changes the text of the span element when the button is clicked.
 
 ```javascript
+// j01_example01.js
 function changeText() {
   const mySpan = document.getElementById("mySpan");
   mySpan.textContent = "Hello World!";
@@ -87,14 +92,17 @@ function changeText() {
 * CSS: styles the span element with blue color, bold font, and increased size.
 
 ```css
-.mySpan {
+/* j01_example01.css */
+#mySpan {
   color: blue;
   font-weight: bold;
   font-size: 1.2em;
 }
 ```
 
-## Variables in JavaScript
+[Example 1](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example01/j01_example01.html)
+
+## Variables
 
 * Variables store data used in programs.
 
@@ -123,7 +131,7 @@ name = "Bob";  // Assigns a new value to the `name` variable
     * Declared with `const`.
     * Values cannot be changed after assignment.
 
-## Primitive Data Types in JavaScript
+## Primitive Data Types
 
 * JavaScript has several built-in data types to represent different kinds of data.
 
@@ -137,14 +145,64 @@ name = "Bob";  // Assigns a new value to the `name` variable
     * null: Represents the intentional absence of an object value.
 
 ```javascript
-let isTrue = true;          // Boolean
-let age = 30;                // Number
-let bigInt = 12345678901234567890n;  // BigInt
-let message = "Hello World!";  // String
-let notAssigned;             // undefined
-let uniqueSymbol = Symbol("unique");  // Symbol
-let noObject = null;          // null
+let isTrue = true; // Boolean
+let age = 30; // Number
+let bigInt = 12345678901234567890n; // BigInt
+let message = "Hello World!"; // String
+let notAssigned; // undefined
+let uniqueSymbol = Symbol("unique"); // Symbol
+let noObject = null; // null
 ```
+
+## Type Coercion (Implicit Conversions)
+
+* JavaScript can automatically convert values from one type to another in certain situations.
+* This can sometimes lead to unexpected behavior.
+
+* **Examples of Type Coercion:**
+
+  * **Number to String:**
+    * Adding a number to a string concatenates them into a string.
+
+```javascript
+let num = 10;
+let str = "hello";
+let combined = num + str; // Coerces num to string ("10hello")
+console.log(combined);
+```
+
+* **String to Number:**
+  * JavaScript attempts to convert a string to a number before performing mathematical operations.
+
+```javascript
+let numStr = "20";
+let result = numStr * 2; // Coerces numStr to number (40)
+console.log(result);
+```
+
+* **Boolean to Number:**
+  * `true` is converted to 1, `false` to 0.
+
+```javascript
+let truthy = true;
+let falsy = false;
+let added = truthy + falsy; // Coerces truthy to 1, falsy to 0 (1)
+console.log(added);
+```
+
+* **null and undefined:**
+  * In some cases, `null` and `undefined` are treated as numeric values (usually 0).
+
+```javascript
+let val1 = null;
+let val2 = undefined;
+let sum = val1 + val2; // Coerces both to 0 (0)
+console.log(sum);
+```
+
+* It's important to be aware of type coercion to avoid unexpected results in your JavaScript code.
+
+[Example 2](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example02.html)
 
 ## Scope (blocks, shadowing)
 
@@ -172,57 +230,39 @@ myFunction();
 console.log(x); // This will print "outer" (original value)
 ```
 
-## Type Coercion (Implicit Conversions)
+[Example 3](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example03.html)
 
-* JavaScript can automatically convert values from one type to another in certain situations.
-* This can sometimes lead to unexpected behavior.
+## Scope (hoisting)
 
-* **Examples of Type Coercion:**
-
-    * **Number to String:**
-        * Adding a number to a string concatenates them into a string.
+* **Function Scope (var):**
+  * Variables declared with `var` (avoid in modern JavaScript) are accessible throughout the function they are declared in, even if declared after their usage.
 
 ```javascript
-let num = 10;
-let str = "hello";
-let combined = num + str;  // Coerces num to string ("10hello")
-console.log(combined);
+function myFunction() {
+  // This is bad practice, can lead to unexpected behavior
+  console.log(y);  // y is accessible here even though declared below
+  var y = 20;
+}
+
+myFunction();
 ```
 
-* **String to Number:**
-    * JavaScript attempts to convert a string to a number before performing mathematical operations.
+* **Hoisting:**
+  * A specific behavior of `var` declarations.
+  * `var` declarations are hoisted to the top of their scope (function or global scope).
+  * This means you can access a `var` variable before it's declared in the code.
+  * Can lead to unexpected results if not used carefully.
 
 ```javascript
-let numStr = "20";
-let result = numStr * 2;  // Coerces numStr to number (40)
-console.log(result);
+console.log(x);  // This will work (hoisting)
+var x = 10;
 ```
 
-* **Boolean to Number:**
-    * `true` is converted to 1, `false` to 0.
+* **Best Practices:**
+  * Use `let` or `const` for variable declarations to avoid confusion and potential errors.
+  * Be mindful of hoisting behavior if using `var`.
 
-```javascript
-let truthy = true;
-let falsy = false;
-let added = truthy + falsy;  // Coerces truthy to 1, falsy to 0 (1)
-console.log(added);
-```
-
-* **null and undefined:**
-    * In some cases, `null` and `undefined` are treated as numeric values (usually 0).
-
-```javascript
-let val1 = null;
-let val2 = undefined;
-let sum = val1 + val2;  // Coerces both to 0 (0)
-console.log(sum);
-```
-
-* It's important to be aware of type coercion to avoid unexpected results in your JavaScript code.
-
-## Complex Data Types in JavaScript
-
-* JavaScript offers complex data types to store collections of data.
+## Objects
 
 * **Objects:**
     * Unordered collections of key-value pairs.
@@ -238,6 +278,10 @@ let person = {
 console.log(person.name);  // Accessing a property by key
 ```
 
+[Example 4](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example04.html)
+
+## Arrays, Array Properties and Methods
+
 * **Arrays:**
     * Ordered collections of items.
     * Items can be of any data type, including other arrays or objects.
@@ -247,10 +291,8 @@ let fruits = ["apple", "banana", "orange"];
 console.log(fruits[1]);  // Accessing an element by index (zero-based)
 ```
 
-## Array Properties and Methods
-
 * Arrays provide built-in properties and methods for working with their content.
-
+ 
 * **Properties:**
   * `length`: Gets the number of elements in the array.
 
@@ -273,7 +315,9 @@ let missingItem = vegetables.indexOf("broccoli");  // missingItem will be -1
 console.log(missingItem);
 ```
 
-## More Array Methods in JavaScript
+[Example 5](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example05.html)
+
+## More Array Methods
 
 * Arrays offer various methods for adding, removing, rearranging, and extracting elements.
 
@@ -309,6 +353,10 @@ console.log(removedElement);  // 0
 console.log(numbers);  // [1, 2, 3, 4]
 ```
 
+[Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example06.html)
+
+## Array Methods: reverse, slice, concat
+
 * **Rearranging Arrays:**
   * `reverse`: Reverses the order of elements in the original array.
 
@@ -338,7 +386,7 @@ let mergedArray = array1.concat(array2);
 console.log(mergedArray);  // [1, 2, 3, 4, 5, 6]
 ```
 
-## Comments in JavaScript
+## Comments
 
 * Comments are lines of code ignored by the JavaScript engine.
 * Used to explain code functionality or improve readability.
@@ -373,57 +421,4 @@ function calculateArea(radius) {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-## Scope (hoisting)
-
-* **Scope:**
-    * The visibility of variables and functions within different code blocks.
-
-* **Block Scope (let and const):**
-    * Variables declared with `let` or `const` are only accessible within the block they are declared in (e.g., `if` statement, `for` loop).
-
-```javascript
-if (true) {
-  let x = 10;
-}
-
-console.log(x); // This line will cause an error (x is not accessible here)
-```
-
-* **Function Scope (var):**
-    * Variables declared with `var` (avoid in modern JavaScript) are accessible throughout the function they are declared in, even if declared after their usage.
-
-```javascript
-function myFunction() {
-  // This is bad practice, can lead to unexpected behavior
-  console.log(y);  // y is accessible here even though declared below
-  var y = 20;
-}
-
-myFunction();
-```
-
-* **Hoisting:**
-    * A specific behavior of `var` declarations.
-    * `var` declarations are hoisted to the top of their scope (function or global scope).
-    * This means you can access a `var` variable before it's declared in the code.
-    * Can lead to unexpected results if not used carefully.
-
-```javascript
-console.log(x);  // This will work (hoisting)
-var x = 10;
-```
-
-* **Best Practices:**
-    * Use `let` or `const` for variable declarations to avoid confusion and potential errors.
-    * Be mindful of hoisting behavior if using `var`.
-
-
+[Example 7](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/j01_example07.html)

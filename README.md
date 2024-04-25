@@ -12,6 +12,6 @@
   * Assignment, Logical, Comparison Operators
   * String Operators
   * Alert, Confirm, Prompt 
-  * Presentation: [./javascript01/javascript01.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript01/javascript01.md)
+  * Presentation: [./javascript02/javascript02.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript02/javascript02.md)
 
 &copy; 2024 Łukasz Pawlik

@@ -7,7 +7,12 @@ const questions = [
     {
         question: "What is the tallest mountain in the world?",
         answer: "C",
-        options: ["A) Mount Everest", "B) K2", "C) Mount Kilimanjaro", "D) Mount Fuji"],
+        options: ["A) Mount Kilimanjaro", "B) K2", "C) Mount Everest", "D) Mount Fuji"],
+    },
+    {
+        question: "What is the capital of Poland?",
+        answer: "B",
+        options: ["A) Bratislava", "B) Warsaw", "C) Prague", "D) Berlin"],
     },
 ];
 
@@ -37,17 +42,20 @@ function checkAnswer(selectedAnswer) {
 
     currentQuestion++;
 
-    if (currentQuestion < questions.length) {
-        displayQuestion();
-    } else {
-        const message = confirm("Quiz Over! Your score is " + score + "/" + questions.length + ". Play again?");
-        if (message) {
-            currentQuestion = 0;
-            score = 0;
+    setTimeout(function() {
+        document.getElementById("feedback").textContent = "";
+        if (currentQuestion < questions.length) {
             displayQuestion();
-            document.getElementById("feedback").textContent = "";
         } else {
-            alert("Thanks for playing!");
+            const message = confirm("Quiz Over! Your score is " + score + "/" + questions.length + ". Play again?");
+            if (message) {
+                currentQuestion = 0;
+                score = 0;
+                displayQuestion();
+                document.getElementById("feedback").textContent = "";
+            } else {
+                alert("Thanks for playing!");
+            }
         }
-    }
+    }, 3000);
 }

@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#student-list {
+    list-style: none;
+    padding: 0;
+}
+
+#student-list li {
+    margin-bottom: 5px;
+}

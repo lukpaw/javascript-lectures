@@ -45,13 +45,6 @@ function checkWinner() {
         }
     }
 
-    // Check for a draw (if all cells are filled and no winner)
-    const isDraw = cells.every(cell => cell.textContent !== "");
-    if (isDraw) {
-        gameOver = true;
-        return "It's a Draw!";
-    }
-
     return false; // No winner or draw yet
 }
 

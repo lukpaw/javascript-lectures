@@ -30,50 +30,8 @@ function makeMove(cell) {
     }
 
     cell.textContent = currentPlayer;
-    checkWinner();
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     updateMessage();
-}
-
-// Function to check for a winning player
-function checkWinner() {
-    const winningConditions = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6],
-    ];
-
-    for (let i = 0; i < winningConditions.length; i++) {
-        const condition = winningConditions[i];
-        const cellA = cells[condition[0]];
-        const cellB = cells[condition[1]];
-        const cellC = cells[condition[2]];
-
-        if (cellA.textContent === cellB.textContent && cellB.textContent === cellC.textContent && cellA.textContent !== "") {
-            gameOver = true;
-            updateMessage(cellA.textContent + " Wins!");
-            return;
-        }
-    }
-
-    // Check for a tie
-    let tie = true;
-    for (let i = 0; i < cells.length; i++) {
-        if (cells[i].textContent === "") {
-            tie = false;
-            break;
-        }
-    }
-
-    if (tie) {
-        gameOver = true;
-        updateMessage("It's a Tie!");
-    }
 }
 
 // Function to update the message displayed below the board

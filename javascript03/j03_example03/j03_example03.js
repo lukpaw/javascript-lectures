@@ -10,7 +10,9 @@ function makeMove(cell) {
 
     cell.textContent = currentPlayer;
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    updateMessage();
+
+    const message = checkWinner();
+    updateMessage(message);
 }
 
 // Function to update the message displayed below the board
@@ -19,5 +21,41 @@ function updateMessage(message) {
     messageElement.textContent = message || (currentPlayer + "'s Turn");
 }
 
+function checkWinner() {
+    const winningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+
+    for (let i = 0; i < winningConditions.length; i++) {
+        const condition = winningConditions[i];
+        const cellA = cells[condition[0]].textContent;
+        const cellB = cells[condition[1]].textContent;
+        const cellC = cells[condition[2]].textContent;
+
+        if (cellA === cellB && cellB === cellC && cellA !== "") {
+            gameOver = true; // Set game over flag if a winning condition is met
+            return `${cellA} Wins!`; // Return the winning player's symbol
+        }
+    }
+
+    // Check for a draw (if all cells are filled and no winner)
+    const isDraw = cells.every(cell => cell.textContent !== "");
+    if (isDraw) {
+        gameOver = true;
+        return "It's a Draw!";
+    }
+
+    return false; // No winner or draw yet
+}
+
 // Call the updateMessage function to display the starting message
 updateMessage();
+
+

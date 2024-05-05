@@ -92,7 +92,7 @@ console.log("mean:", getMeanTemp(day1)); // -> mean: 16.666666666666668
 
 * `getMeanTemp(temperatures)`: The function takes one parameter, `temperatures`, which is an array containing the temperature data.
 
-[Example 1](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example01/j04_example01.js)
+[Example 1](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example01.js)
 
 ## Variable Shadowing in Functions
 
@@ -175,7 +175,7 @@ console.log(getMeanTemp([10, 30])); // -> 20 (valid input)
 * The `getMeanTemp` function now checks if the `temperatures` argument is an array using `instanceof`.
 * If not an array, `NaN` is returned to indicate an error.
 
-[Example 2](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example02/j04_example02.js)
+[Example 2](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example02.js)
 
 ## Recursion in Functions
 
@@ -221,7 +221,7 @@ console.log(factorial(6)); // -> 720
 * Use recursion carefully, considering the number of embedded calls and potential for errors.
 * Ensure a clear condition to terminate the recursion to avoid infinite loops.
   
-[Example 3](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example03/j04_example03.js)
+[Example 3](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example03.js)
 
 ## Functions as First-Class members
 
@@ -275,7 +275,7 @@ console.log(operation(add, 10, 20)); // -> 30 (calls `add` with 10 and 20)
 console.log(operation(multiply, 10, 20)); // -> 200 (calls `multiply` with 10 and 20)
 ```
 
-[Example 4](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example04/j04_example04.js)
+[Example 4](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example04.js)
 
 ## Anonymous Functions
 
@@ -377,7 +377,7 @@ console.log('test 2');
 // inner 1
 ```
 
-[Example 5](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example05/j04_example05.js)
+[Example 5](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example05.js)
 
 ## setTimeout and setInterval Functions
 
@@ -466,4 +466,9 @@ This code demonstrates both function expression and arrow function approaches:
 Both functions achieve the same result of logging the sum to the console and returning the value.
 The arrow function offers a more concise syntax for this specific case.
 
-[Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example06/j04_example06.js)
+[Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example06.js)
+
+
+Tic-Tac-Toe game using callback function:
+
+[Example 7](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/j04_example07/j04_example07.js)

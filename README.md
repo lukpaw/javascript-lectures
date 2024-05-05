@@ -13,5 +13,20 @@
   * String Operators
   * Alert, Confirm, Prompt 
   * Presentation: [./javascript02/javascript02.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript02/javascript02.md)
+* **JavaScript 3 (E1M4):**
+  * The if statement, Conditional (Ternary) Operator
+  * The switch case statement
+  * The while loop, The for loop
+  * The break and continue statements
+  * Presentation: [./javascript03/javascript03.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript03/javascript03.md)
+* **JavaScript 4 (E1M5):**
+  * Declaring and Calling Functions, The return Statement in Functions, Parameters in Functions
+  * Variable Shadowing in Functions, Parameter Validation, Recursion in Functions
+  * Functions as First-Class members, Anonymous Functions
+  * Callback Functions, Asynchronous Callbacks
+  * setTimeout and setInterval Functions, Arrow Functions
+  * Presentation: [./javascript04/javascript04.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/javascript04.md)
+
+Sources: Cisco Networking Academy, JavaScript Essentials 1 (JSE)
 
 &copy; 2024 Łukasz Pawlik

@@ -106,7 +106,7 @@ while (isOver !== true) {
 }
 ```
 
-## The do ... while loop
+## c
 
 * Executes a block of code at least once, then continues as long as a condition is true.
 

@@ -11,7 +11,9 @@ function createBoard() {
         const row = document.createElement("tr");
         for (let j = 0; j < 3; j++) {
             const cell = document.createElement("td");
+            console.log("FOR/FOR: cell", i, j);
             cell.addEventListener("click", function() {
+                console.log("CELL/LISTENER cell", i, j);
                 makeMove(cell);
             });
             cells.push(cell);

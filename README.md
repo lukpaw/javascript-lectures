@@ -26,6 +26,12 @@
   * Callback Functions, Asynchronous Callbacks
   * setTimeout and setInterval Functions, Arrow Functions
   * Presentation: [./javascript04/javascript04.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript04/javascript04.md)
+* **JavaScript 5 (E1M6):**
+  * SyntaxError, ReferenceError, TypeError, RangeError
+  * Handling Errors with try...catch, The finally Statement
+  * Throwing Custom Errors
+  * Debugging JavaScript with Developer Tools
+* Presentation: [./javascript05/javascript05.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/javascript05.md) 
 
 Sources: Cisco Networking Academy, JavaScript Essentials 1 (JSE)
 

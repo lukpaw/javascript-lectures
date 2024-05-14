@@ -31,7 +31,7 @@
   * Handling Errors with try...catch, The finally Statement
   * Throwing Custom Errors
   * Debugging JavaScript with Developer Tools
-* Presentation: [./javascript05/javascript05.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/javascript05.md) 
+  * Presentation: [./javascript05/javascript05.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/javascript05.md) 
 
 Sources: Cisco Networking Academy, JavaScript Essentials 1 (JSE)
 

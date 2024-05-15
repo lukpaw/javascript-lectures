@@ -31,6 +31,7 @@
   * Handling Errors with try...catch, The finally Statement
   * Throwing Custom Errors
   * Debugging JavaScript with Developer Tools
+  * Using External Libraries in Node.js
   * Presentation: [./javascript05/javascript05.md](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/javascript05.md) 
 
 Source: Cisco Networking Academy, JavaScript Essentials 1 (JSE)

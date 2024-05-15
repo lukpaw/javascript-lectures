@@ -301,3 +301,71 @@ console.log(factorial(1000)); // Throws a RangeError
 * Set breakpoints to pause code execution at specific lines.
 * Step through your code line by line.
 * Inspect variable values at different points in your code.
+
+## Using External Libraries in Node.js
+
+* Extend functionalities beyond built-in modules.
+* Example: User input with the `prompt` library.
+
+**Installation:**
+
+1. Open your terminal and navigate to your project directory.
+2. Run the following command to install the `prompt` library:
+
+```bash
+npm install prompt
+```
+
+**Code Example:**
+
+```javascript
+// npm install prompt
+
+const prompt = require('prompt');
+
+// Function to convert Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+
+// Function to convert Fahrenheit to Celsius
+function fahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5/9;
+}
+
+// Get user input for temperature and conversion type
+prompt.start();
+
+prompt.get(['temperature', 'type'], (err, result) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  
+  const temperature = parseFloat(result.temperature);
+  const type = result.type.toUpperCase();
+  
+  // Validate conversion type
+  if (type !== "C" && type !== "F") {
+    console.error("Invalid conversion type. Please enter 'C' or 'F'.");
+    return;
+  }
+  
+  // Convert temperature based on type
+  let convertedTemp;
+  if (type === "C") {
+    convertedTemp = celsiusToFahrenheit(temperature);
+  } else {
+    convertedTemp = fahrenheitToCelsius(temperature);
+  }
+  
+  // Display the converted temperature
+  console.log(`${temperature}${type} is equal to ${convertedTemp.toFixed(2)}${type === "C" ? "F" : "C"}`);
+});
+```
+
+Uses Node.js
+[Example 5](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/j05_example05.js)
+
+Uses a browser
+[Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/j05_example06/j05_example06.html)

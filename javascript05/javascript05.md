@@ -377,3 +377,7 @@ Uses a browser
 * Select ```Path```, ```Edit```, ```New```
 * Add ```C:\User\Student.ST11LAB319\node```
 * Click ```OK```
+
+# NPM
+* Install https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+* Because it is necessary for install libs e.g. npm install prompt

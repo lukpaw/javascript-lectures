@@ -1,4 +1,4 @@
-// npm install prompt
+0// npm install prompt
 
 const prompt = require('prompt');
 

@@ -369,3 +369,11 @@ Uses Node.js
 
 Uses a browser
 [Example 6](https://github.com/lukpaw/javascript-lectures/blob/main/javascript05/j05_example06/j05_example06.html)
+
+## How to install node.js
+* Download: https://nodejs.org/en/download/prebuilt-binaries
+* Unpack to folder: ```C:\Users\Student.ST11LAB319\node```
+* Type here to search: ```Edit enviroment variables for your account```
+* Select ```Path```, ```Edit```, ```New```
+* Add ```C:\User\Student.ST11LAB319\node```
+* Click ```OK```
